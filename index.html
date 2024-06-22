@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <!-- adding the css file -->
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+
+<body>
+    <!-- container for holding the weather card -->
+    <div class="container">
+        <h1>Weather Web App</h1>
+
+        <!-- section for searching the weather of a city -->
+        <form onsubmit="getData(event)" class="searchData">
+            <input id="inputBox" type="text" placeholder="Enter the city name" />
+            <button>Search</button>
+        </form>
+
+        <!-- section for displaying the city weather data -->
+        <section class="cityWeatherData">
+            <!-- displaying the country details -->
+            <div class="countryDetails details">
+                <!-- displaying the country name -->
+                <div class="card">
+                    <p>Country Name</p>
+                    <h3 id="countryName">___</>
+                </div>
+
+                <!-- displaying the state name -->
+                <div class="card">
+                    <p>State Name</p>
+                    <h3 id="stateName">__</>
+                </div>
+
+                <!-- displaying the city name -->
+                <div class="card">
+                    <p>City Name</p>
+                    <h3 id="cityName">__</>
+                </div>
+                <div class="card">
+                    <p>Local Time</p>
+                    <h3 id="localTime">__</>
+                </div>
+            </div>
+
+            <!-- displaying the weather status -->
+            <div class="weatherDetails details">
+                <!-- displaying the humidity -->
+                <div class="card">
+                    <p>Humidity</p>
+                    <h3 id="humidity">__</>
+                </div>
+
+                <!-- displaying the wind speed -->
+                <div class="card">
+                    <p>Wind Speed</p>
+                    <h3><span id="windSpeed">__</span> KMPH</h3>
+                </div>
+
+                <!-- displaying the current temperature in celsius -->
+                <div class="card">
+                    <p>Temperature</p>
+                    <!-- unicode for degree celsius symbol -->
+                    <h3><span id="temprature">__</span>&#8451;</h3>
+                </div>
+
+                <!-- displaying the weather condition -->
+                <div class="card">
+                    <img width="20px" id="logoImage" src="" alt="icon" />
+                    <h4 id="weatherStatus">___</>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+<!-- adding the javascript file -->
+<script src="./script.js"></script>
+
+</html>
